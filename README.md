@@ -1,3 +1,4 @@
+
 # customer-api
 
 An API in Java and Spring Framework for customer registration.
@@ -35,7 +36,8 @@ The API has the following endpoints:
 
 You must return with body with one of the following codes:
 
-- 201: if successful.
+* 201: if successful.
+
 
 `PUT / customers / {id}`: updates a customer.
 
@@ -59,9 +61,11 @@ You must return with body with one of the following codes:
 
 The object to be modified must be sent. Void return.
 
+
 The response must contain the following codes:
 
-- 200: in case of success.
+* 200: in case of success.
+
 
 `GET / customers`: returns all customers.
 
@@ -98,7 +102,38 @@ A list of customers must be returned.
 
 The response must contain the following codes:
 
-- 200: if there are registered customers
-- 404: if there are no customers created.
+* 200: if there are registered customers
+* 404: if there are no customers created.
 
 `DELETE / customers / {id}`: remove a client by id.
+
+The response must contain the following codes:
+
+* 204: in case of success.
+* 404: if you can't find the customer.
+
+
+### Tests
+
+* To execute the unit test, the command executed must be:
+
+``
+mvn test
+``
+
+
+### Execution
+
+By default, the API is available at [http: // localhost: 8080 /] (http: // localhost: 8080 /)
+
+To run the API we can use the following methods:
+
+``
+java -jar customer-base-0.0.1-SNAPSHOT.war
+``
+    
+or with the following command
+
+``
+mvn spring-boot: run
+``
